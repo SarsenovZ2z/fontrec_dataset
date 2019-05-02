@@ -5,7 +5,7 @@ import time
 text_file = 'resources/text/lorem.txt'
 
 img_num = 100
-start_index = 0
+start_index = 100
 image_size = 256
 dataset_path = 'dataset/' + str(image_size) + '/'
 
@@ -43,4 +43,4 @@ for i in range(len(fonts)):
             y+=line_space
 
         img.save(dataset_path + fonts[i]['name'] + '_' + str(start_index + j) + '.jpg')
-        time.sleep(0.1)
+        time.sleep(0.05)
