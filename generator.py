@@ -4,13 +4,14 @@ import time
 
 text_file = 'resources/text/lorem.txt'
 
-img_num = 100
+img_num = 250
 start_index = 0
+sleep_time = 3
 image_size = 256
 dataset_path = 'dataset/' + str(image_size) + '/'
 
 font_path = 'resources/fonts/'
-fonts = getFonts(font_path)
+fonts = getFonts(font_path)[:30]
 font_size = 14
 font_size_delta = 16
 font_color = (0, 0, 0)
@@ -20,7 +21,7 @@ text_angle_delta = 0
 text_x_offset = -20
 text_x_offset_delta = 25
 text_y_offset = -20
-text_y_offset_delta = 5
+text_y_offset_delta = 7
 text_line_space = 5
 text_line_space_delta = 5
 
@@ -43,4 +44,4 @@ for i in range(len(fonts)):
             y+=line_space
 
         img.save(dataset_path + fonts[i]['name'] + '_' + str(start_index + j) + '.jpg')
-        time.sleep(0.1)
+        time.sleep(sleep_time/1000)
